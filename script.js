@@ -1,6 +1,4 @@
-console.log('Hello World');
-
-var sayHello = function (name, date) {
-    return "Hello, ".concat(name, ", today is ").concat(date.toDateString());
-};
-console.log(sayHello('John', new Date()));
+var parentNode = document.querySelector('#main');
+var div = document.createElement('div');
+div.textContent = 'Hello, world!';
+parentNode.appendChild(div);
