@@ -1,0 +1,13 @@
+var container = document.querySelector('.container');
+var content = document.createElement('div');
+content.classList.add('content');
+content.textContent = 'this is the content';
+container === null || container === void 0 ? void 0 : container.appendChild(content);
+var para = document.createElement('p');
+para.style.color = 'red';
+para.textContent = 'hey i\'m red';
+container === null || container === void 0 ? void 0 : container.appendChild(para);
+var h3 = document.createElement('h3');
+h3.style.color = 'blue';
+h3.textContent = 'i\'m a blue h3';
+container === null || container === void 0 ? void 0 : container.appendChild(h3);
