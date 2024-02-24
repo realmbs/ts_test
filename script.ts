@@ -1,27 +1,23 @@
-const container = document.querySelector('.container');
-const content = document.createElement('div');
-content.classList.add('content');
-content.textContent = 'this is the content';
-container?.appendChild(content);
-const para = document.createElement('p');
-para.style.color = 'red';
-para.textContent = 'hey i\'m red';
-container?.appendChild(para);
-const h3 = document.createElement('h3');
-h3.style.color = 'blue';
-h3.textContent = 'i\'m a blue h3';
-container?.appendChild(h3)
-const div = document.createElement('div');
-div.style.border = '1px solid black';
-div.style.backgroundColor = 'pink';
-// container?.appendChild(div);
-const h1 = document.createElement('h1');
-const para2 = document.createElement('p');
-h1.textContent = 'i\'m in a div';
-para2.textContent = 'me too';
-div.appendChild(h1);
-div.appendChild(para2);
-container?.appendChild(div);
-const btn = document.querySelector('.btn');
-// btn.onclick = () => alert('hello');
-btn?.addEventListener('click', () => alert('hello again'));
+class Student {
+  fullName: string;
+  constructor(
+    public firstName: string,
+    public middleInitial: string,
+    public lastName: string
+  ) {
+    this.fullName = `${firstName} ${middleInitial} ${lastName}`;
+  }
+}
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+function greeter(person: Person) {
+  return `Hello, ${person.firstName} ${person.lastName}`;
+}
+
+const user = new Student('Jane', 'M.', 'User');
+
+document.body.textContent = greeter(user);

@@ -1,27 +1,14 @@
-var container = document.querySelector('.container');
-var content = document.createElement('div');
-content.classList.add('content');
-content.textContent = 'this is the content';
-container === null || container === void 0 ? void 0 : container.appendChild(content);
-var para = document.createElement('p');
-para.style.color = 'red';
-para.textContent = 'hey i\'m red';
-container === null || container === void 0 ? void 0 : container.appendChild(para);
-var h3 = document.createElement('h3');
-h3.style.color = 'blue';
-h3.textContent = 'i\'m a blue h3';
-container === null || container === void 0 ? void 0 : container.appendChild(h3);
-var div = document.createElement('div');
-div.style.border = '1px solid black';
-div.style.backgroundColor = 'pink';
-// container?.appendChild(div);
-var h1 = document.createElement('h1');
-var para2 = document.createElement('p');
-h1.textContent = 'i\'m in a div';
-para2.textContent = 'me too';
-div.appendChild(h1);
-div.appendChild(para2);
-container === null || container === void 0 ? void 0 : container.appendChild(div);
-var btn = document.querySelector('.btn');
-// btn.onclick = () => alert('hello');
-btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', function () { return alert('hello again'); });
+var Student = /** @class */ (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = "".concat(firstName, " ").concat(middleInitial, " ").concat(lastName);
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, ".concat(person.firstName, " ").concat(person.lastName);
+}
+var user = new Student('Jane', 'M.', 'User');
+document.body.textContent = greeter(user);
